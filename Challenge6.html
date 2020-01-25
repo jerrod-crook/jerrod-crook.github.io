@@ -1,0 +1,110 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+</head>
+
+<body style="padding: 10px">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="navbar-brand" href="index.html">Home</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge1.html">Challenge 1<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge2.html">Challenge 2<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge3.html">Challenge 3<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge4.html">Challenge 4<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge5.html">Challenge 5<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item active">
+                   <a class="nav-link" href="Challenge6.html">Challenge 6<span class="sr-only">(current)</span></a>
+               </li>
+           </ul>
+       </div>
+    </nav>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Algobowl </h5>
+                        <p>It is coming up on Algobowl season for the algorithms class at Mines, and Dr. Mehta is working on putting together the teams. </p>
+                        <p>He likes to have students work with people they know, as well as with people they don’t know. </p>
+                        <p>In order to place students on teams that they know, he asked each student to submit to him one other person in the class that they would like to work with.</p>  
+
+                        <p>This year, he wants to honor each and every one of the student’s requests. That means if a student submitted a request, </p>
+                        <p>they will be placed on the same team as the person they requested. For example, if Sean requested Mitch, Mitch requested Racheal, </p>
+                        <p>and Rachael requested Sean, all three of them would be placed on the same team.  </p>
+
+                        <p>If Dr. Mehta were to assign groups only based on the requests he received, how many groups would he have participating in Algobowl? </p>
+                        <p>Note that this means there may not be the same number of students in each group. </p>
+
+                        <p>The only information Dr. Mehta knows is the number of students in his class, the names of the students who submitted requests, </p>
+                        <p>and the student they requested. The first line of the input file is the number of students in the class. </p>
+                        <p>Each of the following lines contains two names separated by a “ – “ ; the first name is the student who submitted the request, </p>
+                        <p>and the second is who they requested. </p>
+                        
+                        <p>The result should be an integer indicating the number of groups. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        File
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="files/nameRequests.txt" download>Download Me!</a></li>
+                    </ul>
+                </div>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        Sample 1 Input:
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">3</li>
+                        <li class="list-group-item">Kylo Ren – Palpatine</li>
+                        <li class="list-group-item">Emperor Palpatine – Snoke</li>
+                        <li class="list-group-item">Supreme Leader Snoke – Kylo Ren</li>
+                        <li class="list-group-item">Output: 1</li>
+                    </ul>
+                </div>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        Sample 2 Input:
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">6</li>
+                        <li class="list-group-item">Rey – Luke Skywalker</li>
+                        <li class="list-group-item">C3 PO – R2 D2</li>
+                        <li class="list-group-item">R2 D2 – C3 PO</li>
+                        <li class="list-group-item">Luke Skywalker – Leia Organa</li>
+                        <li class="list-group-item">Leia Organa – Poe</li>
+                        <li class="list-group-item">Poe Dameron – Rey</li>
+                        <li class="list-group-item">Output: 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
