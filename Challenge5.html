@@ -79,67 +79,63 @@
             <div class="col-8">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Maze Game</h5>
-                        You, a recent graduate from Mines have decided to make an amazing game that is procedurally generated from cubes. 
-                        You have the code that generates the world and it is beautiful but lacking action so you decide to spruce it up 
-                        with some A.I. that will choose an optimal path to get from point A to point B. 
-                        Given the input file that lists all of the cubes in your world and the starting and ending positions, answer the following questions:
-                                            
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"> 1.	What is the shortest number of moves needed to get from the starting point to the ending point?</li>
-                            <li class="list-group-item">2. Print the valid path to a txt file in the same format as the input file</li>
-                        </ul>
+                        <h5 class="card-title">Image Steganography</h5>
+                        <p>You have been provided with a raster image, “secret.png”. This image 
+                        appears to be a beautiful vista of the Colorado School of Mines campus, but 
+                        as the filename implies, there is a secret hidden within.</p>  
+                        <p>Your objective is to expose a covert drawing using inside details of the cipher used to hide it.  
+                        The drawing was hidden using steganography: the practice of concealing a 
+                        message within another message.  In this case, the ordinary image is not 
+                        only storing the key, but also the encrypted message you are tasked with 
+                        decoding.</p>
+
+                        <p>Every pixel of the visible image and its [X,Y] position exactly corresponds to 
+                        a [X,Y] pixel in a hidden image you will construct. As such, the invisible 
+                        image’s pixels are concealed within each pixel of the RGB-encoded picture.
+                        secret.png, the campus photo, is a 24-bit image comprised of red, green, and
+                        blue components.  The encoding of the binary image color information can 
+                        be thought to be stored like:</p>
+                        <p>RRRRRRRR GGGGGGGG BBBBBBBB</p>
+                        <p>However, the secret image is a grayscale/non-color image whose pixels are 
+                        each constructed of a 3-bit color component.  As we understand with binary 
+                        numbers, keep in mind that this means the maximum value would be 2^3-1,
+                        therefore the maximum luminosity expressed by our hidden image will be 7. 
+                        Let’s call the bits that make up this 3-bit number X, Y, and Z; </p>
+                        <p>X (representing 4) is most significant, and Z (representing 1) is least significant.</p>
+                        <p>These grayscale values and their corresponding luminosity bits (X, Y, and Z) 
+                        have been respectively hidden within the least significant bit of the red, 
+                        green, and blue color components in the visible image (secret.png). X has 
+                        been hidden inside red, Y has been hidden inside green, and Z has been 
+                        hidden inside blue. Remember, each pixel corresponds to a pixel in the 
+                        hidden image, so each non-secret pixel contains all the information you need
+                        for the secret pixel in the exact same location.</p>
+                        <p>RRRRRRRX GGGGGGGY BBBBBBBZ</p>
+                        There is additional protection, though. This secret image has been protected 
+                        with an XOR cipher. To fully decrypt the image, you need to XOR the 
+                        grayscale bits (X, Y, and Z) against the bit to the left of each one.  So, for the
+                        pixel if the RGB value is:</p>
+                        <p>00000011 00000001 00000010</p>
+                        <p>Then you must perform and XOR operation,
+                        X = XOR (1, 1),  Y = XOR (0, 1),  and Z = XOR (1, 0)</p>
+                        <p>Once you have the secret image, tell us what it is!</p>
                         
                     </div>
                 </div>
                 <br/>
-                <div class="card">
-                    <div class="card-header">
-                        Movement Constraints
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> 1. Travel is restricted to along the top of a cube</li>
-                        <li class="list-group-item">2. Diagonal movement is not allowed, only movement along the faces/edges of the cubes</li>
-                        <li class="list-group-item">3. Vertical changes are allowed but only for deltas of one cube</li>
-                    </ul>
-                </div>
-                <br/>
-                <div class="card">
-                    <div class="card-header">
-                        File Information
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">1. Each line of the file represents a cube that occupies a space in a three dimensional grid using x,y,z notation with the y axis pointing up.</li>
-                        <li class="list-group-item">2. x,y,z >= 0</li>
-                        <li class="list-group-item">3. The starting point will have an additional element (x,y,z,s)</li>
-                        <li class="list-group-item">4. The ending point will have an additional element (x,y,z,e)</li>
-                    </ul>
-                </div>
+                
             </div>
             <div class="col-4">
                 <div class="card">
                     <div class="card-header">
-                        File
+                        Image
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="files/maze.txt" download>Download Me!</a></li>
+                        <li class="list-group-item"><a href="files/secret.png" download>Download Me!</a></li>
                     </ul>
                 </div>
                 <br/>
                 <div class="card">
-                    <img class="card-img-top" src="files/maze1.png" alt="Card image cap">
-                    <div class="card-header">
-                        Examples of allowed movement from 0,1,0 to 0,0,1 to 1,0,1 to 1,1,2
-                    </div>
-                    
-                </div>
-                </br/>
-                <div class="card">
-                    <img class="card-img-top" src="files/maze2.png" alt="Card image cap">
-                    <div class="card-header">
-                        Examples of movement that is not allowed. Diagonal, more than change in height > 1, and onto a grid spot without a cube.
-                    </div>
-                    
+                    <img class="card-img-top" src="files/secret.png" alt="Card image cap">
                 </div>
             </div>
         </div>

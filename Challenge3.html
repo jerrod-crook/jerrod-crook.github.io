@@ -76,57 +76,40 @@
     </nav>
     <br/>
     <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Password Manager</h5>
-                <p>In recent news, it's been leaked that the NotSoFast Password Manager, instead of using modern encryption techniques, has opted to use a chain of basic cyphers for all of their passwords.</p> 
-                <p>The pattern goes like this:</p>
-                <p>Given some integer n, perform these operations n times: </p>
-                <p>rotate the text n times to the left   </p>
-                <p>shift letters up by n (i.e. a Caesar cipher)</p>
-                <p>For example, for n = 2:</p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">Original</th>
-                        <th scope="col">Rotate left</th>
-                        <th scope="col">Shift up</th>
-                        <th scope="col">Rotate left</th>
-                        <th scope="col">Shift up</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row">Password</th>
-                        <td>sswordPa</td>
-                        <td>uuyqtfRc</td>
-                        <td>yqtfRcuu</td>
-                        <td>AsvhTeww</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>Seeing the news, you decide to snag some cyphertext passwords off the dark web in exchange for some QubitCoin,</p> 
-                <p>hoping to steal some personal info (even though your mother raised you better than that).</p>
-                <p>What are the plaintext versions of the passwords, and what value of n was used?</p>
-                <p><strong>Note</strong></p>
-                <p>1. the alphabet we're using is:</p>
-                <p>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</p>
-                <p>2. rotations at the end of a sequence wrap to the start.</p>
-
+        <div class="row">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Wolfram Beta Lite</h5>
+                        <p>Natural language processing is the science of deriving meaning from text, and is becoming increasingly prevalant in software, 
+                            especially with digital assistants like Siri and Alexa. 
+                            This challenge is just the tip of the iceberg and focuses on math equations.
+                        </p>
+                        <p>Your goal for this challenge is to write a program that can read the MathProblems.txt file, evaluate the 25 math problems listed in it, and output their answers. 
+                            <p>The problems use addition, subtraction, multiplication, and division, as well as parentheses, so you'll need to be careful to follow the proper order of operations.</p> 
+                            <p>Do not use a piece of code that evaluates a string as if it were code, such as Python's eval() function, as this is unsafe, and do not use any third party libraries to automate this.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <br/>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Passwords</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">1zlcXffjbe</li>
-                    <li class="list-group-item">2efbaqb4C</li>
-                    <li class="list-group-item">be1NOPCXffj</li>
-                    <li class="list-group-item">2efbapXgC</li>
-                    <li class="list-group-item">YZ1234NOPQRX</li>
-                    <li class="list-group-item">X5U5UgPef4Waa</li>
-                </ul>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        File
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="files/MathProblems.txt" download="MathProblems.txt">Download Me!</a></li>
+                    </ul>
+                </div>
+                <br/>
+                <div  class="card">
+                    <div class="card-header">
+                        Sample Output
+                    </div>
+                    <div style="padding:10px;">
+                        <p>1+1 = 2</p> 
+                    </div>
+                </div>
             </div>
         </div>
     </div>

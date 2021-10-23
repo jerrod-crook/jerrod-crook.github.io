@@ -79,24 +79,14 @@
             <div class="col-8">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Algobowl </h5>
-                        <p>It is coming up on Algobowl season for the algorithms class at Mines, and Dr. Mehta is working on putting together the teams. </p>
-                        <p>He likes to have students work with people they know, as well as with people they don’t know. </p>
-                        <p>In order to place students on teams that they know, he asked each student to submit to him one other person in the class that they would like to work with.</p>  
+                        <h5 class="card-title">Disjointed Graphs</h5>
+                        <p>The attached file (points.txt) contains several points in 3D space, each on their own line. Within the total set of points, there are two disjoint graphs (i.e. the set of points A,B,C are connected, the set of points D,E,F are connected, but nothing connects these two sets directly).</p>
+                        <p>Your objective is to find <strong>all</strong> of the valid points that will connect the disjoint graphs. There is no order to the master list of points, you will have to determine what the disjoint sets are.</p>
 
-                        <p>This year, he wants to honor each and every one of the student’s requests. That means if a student submitted a request, they will be placed on the same team as the person they requested. </p>
-                        <p>For example, if Sean requested Mitch, Mitch requested Racheal, and Rachael requested Sean, all three of them would be placed on the same team. </p>
-
-                        <p>If Dr. Mehta were to assign groups only based on the requests he received, how many groups would he have participating in Algobowl? </p>
-                        <p>Note that this means there may not be the same number of students in each group. </p>
-
-                        <p>The only information Dr. Mehta knows is the number of students in his class, the names of the students who submitted requests, and the student they requested.</p>
-                        <p>The first line of the input file is the number of students in the class. </p>
-                        <p>Each of the following lines contains two names separated by a “ – “ ; the first name is the student who submitted the request, and the second is who they requested. </p>
                         
-                        <p>The result should be an integer indicating the number of groups. </p>
                     </div>
                 </div>
+                
             </div>
             <div class="col-4">
                 <div class="card">
@@ -104,39 +94,46 @@
                         File
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="files/nameRequests.txt" download>Download Me!</a></li>
+                        <li class="list-group-item"><a href="files/points.txt" download>Download Me!</a></li>
                     </ul>
                 </div>
                 <br/>
                 <div class="card">
+                    <img class="card-img-top" src="files/movement_rules.png" alt="Card image cap">
                     <div class="card-header">
-                        Sample 1 Input:
+                        Movement Rules
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">3</li>
-                        <li class="list-group-item">Kylo Ren – Palpatine</li>
-                        <li class="list-group-item">Emperor Palpatine – Snoke</li>
-                        <li class="list-group-item">Supreme Leader Snoke – Kylo Ren</li>
-                        <li class="list-group-item">Output: 1</li>
-                    </ul>
-                </div>
-                <br/>
-                <div class="card">
-                    <div class="card-header">
-                        Sample 2 Input:
+                    <div style="padding:10px">
+                        <p>Lets say that the green point is 0,0,0 - it can move to any of its neighbors in blue:</p>
+                        <p>(-1.0, 1.0, -1.0)</p>
+                        <p>(0.0, 1.0, -1.0)</p>
+                        <p>(1.0, 1.0, -1.0)</p>
+                        <p>(-1.0, 1.0, 0.0)</p>
+                        <p>(0.0, 1.0, 0.0)</p>
+                        <p>(1.0, 1.0, 0.0)</p>
+                        <p>(-1.0, 1.0, 1.0)</p>
+                        <p>(0.0, 1.0, 1.0)</p>
+                        <p>(1.0, 1.0, 1.0)</p>
+                        <p>(-1.0, 0.0, -1.0)</p>
+                        <p>(0.0, 0.0, -1.0)</p>
+                        <p>(1.0, 0.0, -1.0)</p>
+                        <p>(-1.0, 0.0, 0.0)</p>
+                        <p>(1.0, 0.0, 0.0)</p>
+                        <p>(-1.0, 0.0, 1.0)</p>
+                        <p>(0.0, 0.0, 1.0)</p>
+                        <p>(1.0, 0.0, 1.0)</p>
+                        <p>(-1.0, -1.0, -1.0)</p>
+                        <p>(0.0, -1.0, -1.0)</p>
+                        <p>(1.0, -1.0, -1.0)</p>
+                        <p>(-1.0, -1.0, 0.0)</p>
+                        <p>(0.0, -1.0, 0.0)</p>
+                        <p>(1.0, -1.0, 0.0)</p>
+                        <p>(-1.0, -1.0, 1.0)</p>
+                        <p>(0.0, -1.0, 1.0)</p>
+                        <p>(1.0, -1.0, 1.0)</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">6</li>
-                        <li class="list-group-item">Rey – Luke Skywalker</li>
-                        <li class="list-group-item">C3 PO – R2 D2</li>
-                        <li class="list-group-item">R2 D2 – C3 PO</li>
-                        <li class="list-group-item">Luke Skywalker – Leia Organa</li>
-                        <li class="list-group-item">Leia Organa – Poe</li>
-                        <li class="list-group-item">Poe Dameron – Rey</li>
-                        <li class="list-group-item">Output: 2</li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
-    </div>
 </body>
