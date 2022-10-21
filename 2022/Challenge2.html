@@ -1,0 +1,146 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 25, 2020 14:05:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var d = new Date();
+
+        d.setHours(d.getHours() - 7);
+        var now = d.getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and second
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+</head>
+
+<body style="padding: 10px">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="navbar-brand" href="../index.html">Home</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge1.html">Challenge 1<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item active">
+                   <a class="nav-link" href="Challenge2.html">Challenge 2<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge3.html">Challenge 3<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge4.html">Challenge 4<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge5.html">Challenge 5<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge6.html">Challenge 6<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link" href="Challenge7.html">Challenge 7<span class="sr-only">(current)</span></a>
+           </li>
+           </ul>
+           
+       </div>
+    </nav>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Red and White with Disaster All Over it</h5>
+                        <img style="height: 400px; width: 300px;" src="files/bond-suit.jpg"/>
+                        <p>
+                            <p></p>
+                            <p>
+                                Success you were able to apply to a secret agency! Now it is time to get dressed for your interview. 
+                                But disaster struck in the community laundry room, The School of Mines  decided to invest in a prototype laundry automation robot for the entire college campus. 
+                                What was a good idea to help students has turned into the complete opposite! 
+                                The laundry robot malfunctioned and tossed your interview clothes and everyone on campus clothes into huge piles. 
+                            </p> 
+                            <p>
+                                Instead of sorting out the clothes by yourself and miss your interview. You make use of the laundry robot and the data it has collected. 
+                                To find your interview clothes you are tasked with analyzing the data the robot is gathering. The robot gives you two string arrays. 
+                                One array has a list of clothing types, that is shirt, pants, socks etc. The other array is the list of colors of these items.
+                            </p> 
+                        </p>
+                        
+                        
+                    </div>
+                </div>
+                <div style="margin-top: 10px;" class="card">
+                    <div class="card-header">
+                        Objective
+                    </div>
+                    <div class="card-body">
+                        <p>Use the two lists to answer the following questions:</p>
+                        <p>1) How many shirts of each color are there?</p>
+                        <p>2) Assuming a pair of socks is two socks of the same color, how many pairs of 
+                        socks do you have?</p>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;" class="card">
+                    <div class="card-header">
+                        Lists
+                    </div>
+                    <div class="card-body">
+                        <p>Shirt,Shirt,Dress,Shorts,Shorts,Dress,Dress,Shorts,Pants,Dress,Shorts,Pants,Dress,Dress,Shorts,Sock,Shirt,Shorts,Sock,Pants,Dress,Shirt,Shirt,Pants,Sock,Shorts,Sock,Sock,Sock,Shirt,Dress,Sock,Shirt,Pants,Pants,Pants,Pants,Shorts,Sock,Shorts,Sock,Pants,Pants,Pants,Dress,Shorts,Shirt,Shirt,Shorts,Dress,Shirt,Pants,Sock,Shorts,Pants,Shorts,Sock,Shirt,Sock,Sock,Shirt,Sock,Shirt,Sock,Sock,Shorts,Shorts,Dress,Shorts,Sock,Sock,Shirt,Shorts,Dress,Pants,Dress,Shorts,Sock,Shirt,Shirt,Pants,Pants,Dress,Shorts,Pants,Shorts,Shorts,Dress,Shirt,Sock,Shirt,Dress,Shorts,Shorts,Shorts,Dress,Sock,Shirt,Pants,Pants,Sock,Sock,Shirt,Shorts,Shorts,Pants,Dress,Dress,Dress,Shirt,Shorts,Pants,Shorts,Pants,Pants,Shorts,Sock,Sock,Dress,Dress,Shirt,Shorts,Dress,Sock,Dress,Shorts,Shorts,Dress,Sock,Dress,Pants,Shirt,Shorts,Sock,Pants,Sock,Shorts,Pants,Shorts,Dress,Shirt,Shorts,Shirt,Shirt,Sock,Shorts,Pants,Pants,Dress,Pants,Sock,Shirt,Dress,Shirt,Shorts,Shirt,Sock,Shirt,Shorts,Shorts,Dress,Shorts,Pants,Sock,Pants,Shirt,Sock,Shirt,Pants,Dress,Shorts,Dress,Sock,Sock,Shorts,Shorts,Sock,Sock,Shorts,Pants,Shorts,Sock,Shirt,Pants,Pants,Sock,Sock,Shirt,Pants,Pants,Dress,Dress,Dress,Shorts,Pants,Pants,Sock,Pants,Dress,Pants,Shorts,Shirt,Dress,Sock,Pants,Shorts,Sock,Shorts,Dress,Pants,Shirt,Sock,Pants,Sock,Sock,Pants,Sock,Sock,Shorts,Shorts,Sock,Shorts,Dress,Pants,Shirt,Shirt,Shorts,Sock,Dress,Shirt,Shorts,Sock,Dress,Shorts,Shorts,Sock,Dress,Pants,Shirt,Dress,Shirt,Dress,Dress,Pants,Sock,Shirt,Dress,Dress,Sock,Dress
+                        </p>
+                        <p>Green,White,Gray,Green,Red,Gray,Red,White,Blue,Blue,Gray,White,Red,Gray,Gray,Green,White,Blue,Red,Black,Gray,Blue,White,Green,Gray,Blue,Blue,White,Green,Red,Green,Red,Green,Green,Gray,Red,Blue,Green,White,Green,White,Blue,Blue,Black,Green,Gray,Blue,Green,Gray,Gray,Black,Black,Red,Blue,Gray,Gray,Blue,Black,Green,White,Gray,Black,Red,Gray,Green,Green,Black,Red,Blue,White,Black,Black,Green,Green,Red,Green,White,Green,Red,Blue,Green,White,Red,Green,Blue,Green,Black,Black,Black,Black,Black,Gray,Black,White,Blue,Black,Red,Green,Blue,Gray,White,Blue,White,Green,Black,Black,Gray,Green,White,Green,White,Blue,Red,Blue,Black,Green,Gray,Black,Gray,White,Red,Black,Red,Green,Gray,Gray,White,Green,Black,Black,Black,Black,Black,Red,White,Black,Green,Black,Black,White,Green,Black,Red,Gray,Blue,Blue,Gray,White,Blue,Gray,Black,Black,Green,Gray,Black,White,Green,Red,White,Black,White,Green,Blue,Red,Red,Red,Red,Gray,White,Green,Black,Blue,Green,Blue,Black,Green,Green,Gray,Blue,Red,Red,Gray,Black,Blue,Blue,Black,Gray,Green,White,White,Black,Black,Gray,White,White,Green,White,White,Green,Black,Blue,Gray,Blue,Green,Blue,Red,Red,White,Red,Gray,Blue,Gray,Green,Black,Black,Gray,Red,White,Black,Black,Black,Blue,Green,Blue,Gray,Green,Black,Blue,Green,Black,Red,Gray,White,Blue,White,Red,Blue,Gray,Red,Red,White,Black,Gray,Blue,Black,Red,Red,Blue,Black,Red
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        Example
+                    </div>
+                    <div class="card-body">
+                        <p>[shirt, pants, sock]</p>
+                        <p>[blue, blue, white]</p>
+                        <p>The indexes match. For example given the lists above. Index 0 is a shirt and index 0
+                        is blue which means the robot detected a blue shirt. Index 1 is pants and index 1 is 
+                        blue which means the robot detected blue pants.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

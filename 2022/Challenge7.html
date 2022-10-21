@@ -1,0 +1,151 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 25, 2020 14:05:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var d = new Date();
+
+        d.setHours(d.getHours() - 7);
+        var now = d.getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and second
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+</head>
+
+<body style="padding: 10px">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="navbar-brand" href="index.html">Home</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge1.html">Challenge 1<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge2.html">Challenge 2<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge3.html">Challenge 3<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge4.html">Challenge 4<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge5.html">Challenge 5<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge6.html">Challenge 6<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item active">
+                    <a class="nav-link" href="Challenge7.html">Challenge 7<span class="sr-only">(current)</span></a>
+               </li>
+           </ul>
+           
+       </div>
+    </nav>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Second Mission: Foreign Agent</h5>
+                        <img style="height: 300px; width: 600px;" src="files/audiowave.png"/>
+                        <p>After your incredible work on tracking extraterrestrial life you were promoted to oversee an entire division uncover foreign spies.
+                            Your team while talented needs your help.
+                        </p>
+                        <p>
+                            You are working in SIGINT for an intelligence office in the federal government with top 
+                            secret clearance.  One of your field operatives intercepted and recorded a radio signal 
+                            being transmitted by a known sleeper agent working for a foreign government, and has 
+                            securely transmitted the recording to your office.  You are tasked with reading the 
+                            demodulated radio message to see what was transmitted.
+                        </p>
+                        <p> You already know the sleeper agent is not acting very carefully and therefore isn’t 
+                            protecting their message using encryption; there will be no need to decrypt this 
+                            message using some sort of cipher.
+                            However, you have been informed the message intercepted is a digital transmission, 
+                            and this is where you come in.  You have only been provided with the raw waveform 
+                            recorded by your field operative’s radio receiver.  Therefore, you will need to 
+                            demodulate this signal from a list of samples.</p>
+                        <p> You have intel that indicates this sleeper 
+                            agent has been using a digital transmitter that leverages Amplitude Phase Shift Keying 
+                            (APSK) modulation (see: https://en.wikipedia.org/wiki/Amplitude_and_phase-
+                            shift_keying).
+                        </p>
+                        <p> The field operative has sent a text file to you for you to demodulate using code.  This file 
+                            is comprised of many samples of a single, full transmission that was intercepted.  
+                            Individual lines of the file represent the signal intensity (amplitude) that the radio 
+                            receiver read at that point in time, as human-readable floating point numbers.  Every 
+                            group of 32 lines in the file are a collection of samples (floating point numbers) that 
+                            become one symbol of the APSK signal transmitted.
+                            Each symbol is a sine wave modulated in two manners: phase and amplitude.  A 
+                            reference “carrier wave” to which the transmitted phase is calculated against is a sine 
+                            wave, which completes its full period over 32 samples in the text file.
+                        </p>
+                        <p> An APSK symbol is comprised of two components:<br/>
+                            1. The phase shift (offset) of the signal, the X axis
+                            2. The amplitude of the signal, the Y axis
+                            <br/>
+                        <p> Phase can shift up to 50% of the waveform, so multiply the phase by two to get a value 
+                            ranging from 0 (fully in phase) to 1 (180 degrees out of phase).
+                            Amplitude does not need any scaling and can be treated as linear for the purposes of 
+                            plotting on the Y axis from 0 (silent) to 1 (full volume).
+                        </p>
+                        <img style="height: 300px; width: 600px;" src="files/audiowave.png"/>
+                        <p>
+                            Visible in the image above is a sine wave whose function abruptly changes at intervals 
+                            of 32 samples.  Understanding the phase (X) and amplitude (Y) of the function at each 
+                            interval is your task here.</p>
+                        <p> Knowing the phase and amplitude for a given symbol, you are able to turn them into a 
+                            corresponding X and Y value to translate them to a bitstream using a constellation.  The 
+                            constellation is:
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        Signal
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="files/signal.txt" download>Download Me!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>

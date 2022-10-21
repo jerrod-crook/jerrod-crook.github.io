@@ -1,0 +1,54 @@
+This language treats all variables as whole numbers, for simplicity. The program executes from top to bottom, and code functions are documented below
+
+----- VARIABLES -----
+
+ASSIGN X TO Y
+The ASSIGN function will instantiate variable Y if needed, then set the value equal to X.
+
+----- MATHEMATICAL OPERATIONS -----
+
+ADD X TO Y
+The ADD function performs addition, incrementing Y by X.
+
+ADD X TO Y INTO Z
+If the ADD function is invoked with INTO, the result of the addition will be stored in Z instead of changing the value of Y.
+
+
+SUBTRACT X FROM Y
+The SUBTRACT function performs subtraction, decrementing Y by X.
+
+SUBTRACT X FROM Y INTO Z
+If the SUBTRACT function is invoked with INTO, the result of the subtraction will be stored in Z instead of changing the value of Y.
+
+
+MULTIPLY X BY Y
+The MULTIPLY function performs multiplication, multiplying X by Y.
+
+MULTIPLY X BY Y INTO Z
+If the MULTIPLY function is invoked with INTO, the result of the multiplication will be stored in Z instead of changing the value of X.
+
+
+DIVIDE X BY Y
+The DIVIDE function performs division, dividing X by Y.
+
+DIVIDE X BY Y INTO Z
+If the DIVIDE function is invoked with INTO, the result of the division will be stored in Z instead of changing the value of X.
+
+----- CONDITIONAL BLOCKS -----
+
+IF X IS Y
+The IF function will begin a conditional code block that ends at the next RESUME function. IF X IS Y will enter the conditional block if the values of X and Y are equal.
+
+IF X
+If the IF function is invoked this way, it will enter the conditional block if the value of X is greater than 0, like a rudimentary boolean.
+
+RESUME
+The RESUME function marks the end of the the previous IF statement.
+
+----- OTHER FUNCTIONS -----
+	
+WRITE X
+The WRITE function will output the value of X to the console.
+	
+COMMENT This is a comment
+The COMMENT function is for notes within the code. Any text on the line after the COMMENT function is ignored when executing.

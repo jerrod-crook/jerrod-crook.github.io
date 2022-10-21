@@ -1,0 +1,128 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 25, 2020 14:05:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var d = new Date();
+
+        d.setHours(d.getHours() - 7);
+        var now = d.getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and second
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+</head>
+
+<body style="padding: 10px">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="navbar-brand" href="index.html">Home</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge1.html">Challenge 1<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge2.html">Challenge 2<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge3.html">Challenge 3<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge4.html">Challenge 4<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge5.html">Challenge 5<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item active">
+                   <a class="nav-link" href="Challenge6.html">Challenge 6<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link" href="Challenge7.html">Challenge 7<span class="sr-only">(current)</span></a>
+           </li>
+           </ul>
+           
+       </div>
+    </nav>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">First Mission: Extraterrestrial Activity </h5>
+                        <img style="height: 250px; width: 400px;" src="files/meninblack.webp"/>
+                        <p>After the interview, Men in Black style, you left everything behind and just became a letter. 
+                            You work in a top secret division within the space force specializing in investigating extraterrestrial activity on Earth. 
+                            Recently, a UFO crash landed in Arizona, but no lifeforms were found on board. 
+                            We know that ships of this form are manned, military vehicles designed to deliver a payload of combatants and 
+                            we are extremely concerned about the number of lifeforms that are currently at large. Your job is to report this number. 
+                        </p>  
+                        <p></p>
+                        
+                    </div>
+                </div>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        Intel
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            We happen to know that these lifeforms pack in like sardines, and on average have a volume of 6 cubic meters. 
+                            Based on combat footage with these lifeforms, we know that they subdivide, so fractional components matter. 
+                            Provided is a file in Wavefront .obj format, which describes the ship. 
+                            Based on past investigations we know these ships are symmetrical, non concave and each face of the ship has nothing between itself and the center of the ship. 
+                            You must not download or use any external software and import this file, the lifeforms have malware everywhere 
+                            designed to report our investigations and we cannot afford to tip them off.
+                            
+                        </p>
+                        <p><strong>Use the Wavefront file to calculate the volume of the ship and then report the expected number of extraterrestrial lifeforms</strong></p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        UFO
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="files/ufo.obj" download>Download Me!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>

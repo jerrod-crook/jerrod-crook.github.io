@@ -1,0 +1,143 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 25, 2020 14:05:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var d = new Date();
+
+        d.setHours(d.getHours() - 7);
+        var now = d.getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and second
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+</head>
+
+<body style="padding: 10px">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="navbar-brand" href="../index.html">Home</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge1.html">Challenge 1<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge2.html">Challenge 2<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge3.html">Challenge 3<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item active">
+                   <a class="nav-link" href="Challenge4.html">Challenge 4<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge5.html">Challenge 5<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge6.html">Challenge 6<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                <a class="nav-link" href="Challenge7.html">Challenge 7<span class="sr-only">(current)</span></a>
+           </li>
+           </ul>
+           
+       </div>
+    </nav>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">The First Interview: Cracking the Code</h5>
+                        <img style="height: 300px; width: 250px;" src="files/casear.png"/>
+                        <p>Good morning agent, </p>
+                        <p>We are looking for a new "guy in the chair" to assist our field agents. You have tested at the top of your class, 
+                            and we want to make sure you can handle the pressure of unexpected requests sent your way before we officially assign you to a case! 
+                            We have received the following picture with the following clue. We suspect it may be a <a href="http://practicalcryptography.com/ciphers/caesar-cipher/">Caesar Cipher.</a> 
+                            Along with this is a lengthy message that we would like you to decipher once you have figured out the key based on the clue.</p>
+                        <p>Best of luck agent!</p> 
+                    </div>
+                </div>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        Clue
+                    </div>
+                    <div class="card-body">
+                        <img style="height: 250px; width: 250px;" src="files/mines.jpg"/>
+                        <p>Eotaax ar Yuzqe</p>
+                        <div>
+                            <p>Message that was sent to us:</p>
+                            <p>"Dear New Agent Candidate"</p>
+                            <p><strong>Translation Section Starts Below</strong></p>
+                            <p>Kag mdq ftq nqef mdagzp. Anhuagexk, iq imzfqp ftue fa nq m eayqitmf fduowk yqeemsq.</p> 
+                            <p>Gzradfgzmfqxk, rad ftq nmp sgke kag saf ftdagst uf uz m rxmet!</p>
+
+                               <p>Itmf qxeq oagxp iq baeeunxq pa iuft egot m ewuxxeqf? U ftuzw kag iuxx nq m sdqmf meeqf fa</p> 
+                               <p>ftq fqmy. Zaftuzs iuft efab kag mzp kagd bdasdmyyuzs bdaiqee.</p>
+                                
+                                <p>Omqemd oubtqde iqdq odqmfqp mdagzp azq tgzpdqp NO. Anhuagexk, Vgxuge Omqemd</p> 
+                                <p>tuyeqxr geqp ftqy fa eqzp eqodqf yqeemsqe modaee ftq ruqxp. Zai ftue ime cgufq ftq</p> 
+                                <p>efdmfqsuo mphmzfmsq rad tuy!  Sdmzfqp, uf omz fmwq m nuf ar fuyq fa eaxhq nk tmzp.</p> 
+                                <p>Dqmxuefuomxxk, uf ue zaf ygot ar mz qzodkbfuaz ftqeq pmke. Mzkazq iuft oapuzs ewuxxe mzp</p> 
+                                <p>m xuffxq nuf ar fuyq omz eaxhq ftqeq dqxmfuhqxk cguowxk. Pa kag ftuzw tuefadk iuxx tmhq m</p> 
+                                <p>rmhadmnxq xqze az agd yaef dqoqzf odkbfasdmbtk fqotzucgqe? Gxfuymfqxk, ftq bauzf ar uf </p>
+                                <p>mxx ue fa wqqb kagd eqodqfe fa kagdeqxr mzp ftaeq kag fdgef. Xampe ar bqabxq tmhq</p> 
+                                <p>eqodqfe fa wqqb. Mxfasqftqd ftagst, kag tmhq bmeeqp agd fqef mzp iq mdq ftduxxqp fa tmhq</p> 
+                                <p>kag. Ftmzw kag rad kagd fuyq mzp kagd ewuxxeqf. U pagnf mzkazq oagxp nq m nqffqd ruf rad </p>
+                                <p>agd msqzok. Azoq kag tmhq ruzuetqp gb tqdq nq egdq fa bdaoqqp fa ftq zqjf cgqefuaz. Zaftuzs</p> 
+                                <p>ue cgufq me rgz me m rqi bdasdmyyuzs cgqefuaze! Eqq kag zqjf fuyq.</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        Questions we have regarding this mysterious message
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">1. What shift is used to solve the cipher?</li>
+                        <li class="list-group-item">2. Using the key and the shift you have learned write a decryption program to take the cryptic message you were given and translate it to readable English. No libraries and no internet solvers!</li>
+                        <li class="list-group-item">3. Programmatically list out the first letter of each sentence</li>
+                        <li class="list-group-item">(I know there is one on the page provided for Caesar Cipher, but this a challenge for you not for the programmer of that site. P.S. Be sure to watch out for punctuation as well!)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

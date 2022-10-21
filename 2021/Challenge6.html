@@ -1,0 +1,139 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 25, 2020 14:05:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var d = new Date();
+
+        d.setHours(d.getHours() - 7);
+        var now = d.getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and second
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+</head>
+
+<body style="padding: 10px">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="navbar-brand" href="index.html">Home</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge1.html">Challenge 1<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge2.html">Challenge 2<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge3.html">Challenge 3<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge4.html">Challenge 4<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="Challenge5.html">Challenge 5<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item active">
+                   <a class="nav-link" href="Challenge6.html">Challenge 6<span class="sr-only">(current)</span></a>
+               </li>
+           </ul>
+           
+       </div>
+    </nav>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Disjointed Graphs</h5>
+                        <p>The attached file (points.txt) contains several points in 3D space, each on their own line. Within the total set of points, there are two disjoint graphs (i.e. the set of points A,B,C are connected, the set of points D,E,F are connected, but nothing connects these two sets directly).</p>
+                        <p>Your objective is to find <strong>all</strong> of the valid points that will connect the disjoint graphs. There is no order to the master list of points, you will have to determine what the disjoint sets are.</p>
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        File
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="files/points.txt" download>Download Me!</a></li>
+                    </ul>
+                </div>
+                <br/>
+                <div class="card">
+                    <img class="card-img-top" src="files/movement_rules.png" alt="Card image cap">
+                    <div class="card-header">
+                        Movement Rules
+                    </div>
+                    <div style="padding:10px">
+                        <p>Lets say that the green point is 0,0,0 - it can move to any of its neighbors in blue:</p>
+                        <p>(-1.0, 1.0, -1.0)</p>
+                        <p>(0.0, 1.0, -1.0)</p>
+                        <p>(1.0, 1.0, -1.0)</p>
+                        <p>(-1.0, 1.0, 0.0)</p>
+                        <p>(0.0, 1.0, 0.0)</p>
+                        <p>(1.0, 1.0, 0.0)</p>
+                        <p>(-1.0, 1.0, 1.0)</p>
+                        <p>(0.0, 1.0, 1.0)</p>
+                        <p>(1.0, 1.0, 1.0)</p>
+                        <p>(-1.0, 0.0, -1.0)</p>
+                        <p>(0.0, 0.0, -1.0)</p>
+                        <p>(1.0, 0.0, -1.0)</p>
+                        <p>(-1.0, 0.0, 0.0)</p>
+                        <p>(1.0, 0.0, 0.0)</p>
+                        <p>(-1.0, 0.0, 1.0)</p>
+                        <p>(0.0, 0.0, 1.0)</p>
+                        <p>(1.0, 0.0, 1.0)</p>
+                        <p>(-1.0, -1.0, -1.0)</p>
+                        <p>(0.0, -1.0, -1.0)</p>
+                        <p>(1.0, -1.0, -1.0)</p>
+                        <p>(-1.0, -1.0, 0.0)</p>
+                        <p>(0.0, -1.0, 0.0)</p>
+                        <p>(1.0, -1.0, 0.0)</p>
+                        <p>(-1.0, -1.0, 1.0)</p>
+                        <p>(0.0, -1.0, 1.0)</p>
+                        <p>(1.0, -1.0, 1.0)</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+</body>
