@@ -134,6 +134,35 @@
                             corresponding X and Y value to translate them to a bitstream using a <strong>constellation</strong>.  The 
                             constellation is:
                         </p>
+                        <img style="height: 300px; width: 600px;" src="files/Constellation.png"/>
+                        <p>
+                            Where,
+                            <ul>
+                                <li>0.25 phase, 0.25 amplitude is the center of a symbol indicating 00,</li>
+                                <li>0.75 phase, 0.25 amplitude is the center of a symbol indicating 01,</li>
+                                <li>0.25 phase, 0.75 amplitude is the center of a symbol indicating 10, and</li>
+                                <li>0.75 phase, 0.75 amplitude is the center of a symbol indicating 11. </li>
+                            </ul>
+                        </p>
+                        <p>
+                            This means that every symbol is 2 bits long, so you need to read 4 symbols to have 
+                            read one byte of a secret message.  You should repeat this process for the entire 
+                            transmission.  Keep in mind that some noise was indicated in the transmission, so you 
+                            will need to approximate symbols based on their minimum distance to each center point 
+                            in the constellation.
+                        </p>
+                        <p>
+                            The resulting bitstream is in little-endian order, with the least significant bits coming first 
+                            in the transmission, following by more and more significant bits. This applies for each 
+                            byte in the data stream.
+                         </P>
+                          <p>
+                            You also know, from previous intercepted transmissions, that the secret message is a 
+                            PNG file.  Therefore, you are expected to demodulate this signal, write the bitstream to 
+                            a PNG file, and open the resulting image to view a secret message.  Though not 
+                            necessary, a bonus for you would be to provide the signal-to-noise ratio to the field 
+                            operative to help them understand how accurate their reception was.
+                        </p>
                     </div>
                 </div>
             </div>
